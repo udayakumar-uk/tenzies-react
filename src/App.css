@@ -1,0 +1,76 @@
+
+.App{
+  width: 50%;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.tenzi-parent{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.tenzi-parent .tenzi-card{
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: #eee;
+}
+
+.roll-button{
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  margin-top: 2rem;
+}
+
+.roll-button > button{
+  padding: 1rem 3rem;
+  font-size: 20px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #6440bf;
+  color: #fff;
+}
+
+.won-bg{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  background: #ffffffa3;
+}
+.winnerLoser{
+  position: absolute;
+  z-index: 1;
+  width: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 991px){
+  .App{
+    width: 80%;
+  }
+  .tenzi-parent{
+    gap: 0.8rem;
+  }
+}
+
+
+@media (max-width: 767px){
+  .App{
+    width: 95%;
+  }
+  .tenzi-parent{
+    gap: 0.6rem;
+  }
+  .tenzi-parent .tenzi-card{
+    padding: 1.2rem;
+  }
+}
